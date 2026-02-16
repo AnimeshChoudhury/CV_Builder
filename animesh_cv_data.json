@@ -1,7 +1,7 @@
 {
   "personal_info": {
     "name": "Animesh Choudhury",
-    "title": "Junior Research Fellow | Remote Sensing & GIS Specialist",
+    "title": "Senior Research Fellow | Remote Sensing & GIS Specialist",
     "email": "official.animesh7@gmail.com",
     "phone": "+91 9046567045",
     "date_of_birth": "29 May 1992",
@@ -11,7 +11,7 @@
     "github": "https://github.com/AnimeshChoudhury",
     "scholar": "https://www.researchgate.net/profile/Animesh-Choudhury",
     "address": "Pahartali, Ward No 9 Raghunathpur, Purulia, 723133 West Bengal, India",
-    "profile_image": "PassportImage.jpg",
+    "profile_image": "profileImage.jpg",
     "google_scholar": "https://scholar.google.com/citations?user=0p-FbaoAAAAJ&hl=en"
   },
   "summary": "Accomplished researcher specializing in Remote Sensing, GIS, and Climate Science with extensive experience in satellite data analysis, machine learning applications for environmental monitoring, and geospatial modeling. Strong background in drought monitoring, snow cover mapping, air quality analysis, and land-atmosphere interactions. Proficient in Python, R, Google Earth Engine, and various remote sensing tools.",
@@ -98,116 +98,31 @@
   ],
   "publications": [
     {
-      "title": "Development of a Data-driven weather forecasting system over India with Pangu-Weather architecture and IMDAA reanalysis Data",
-      "authors": "Animesh Choudhury and Jagabandhu Panda",
-      "venue": "arXiv preprint arXiv:2503.12956",
-      "year": 2025,
-      "citations": 2,
-      "type": "journal"
-    },
-    {
-      "title": "Urban Modulation of Local Weather Over Geographically Distinct Cities, and Future Prospects",
-      "authors": "Jagabandhu Panda and Sudhansu S Rath and Asmita Mukherjee and Srutisudha Mohanty and XX Li and TY Koh and Leisle K Norford and Mathias Roth and Saugat Bhattacharyya and Debjyoti Roy and Animesh Choudhury and Nistha Nagar and Sanjeev Singh and Sreyasi Biswas and Sudeshna Das",
-      "venue": "Unknown venue",
-      "year": 2025,
+      "title": "A Response of Snow Cover to the Climate in the Northwest Himalaya (NWH) Using Satellite Products",
+      "authors": "Choudhury A, Yadav AC, Bonafoni S",
+      "venue": "Remote Sensing",
+      "year": 2021,
       "citations": 0,
-      "type": "conference"
-    },
-    {
-      "title": "Analysis and Forecasting of Temporal Rainfall Variability Over Hundred Indian Cities Using Deep Learning Approaches: S. Singh et al.",
-      "authors": "Sanjeev Singh and Asmita Mukherjee and Jagabandhu Panda and Animesh Choudhury and Saugat Bhattacharyya",
-      "venue": "Earth Systems and Environment",
-      "year": 2024,
-      "citations": 10,
-      "type": "journal"
-    },
-    {
-      "title": "Drought trend and its association with land surface temperature (LST) over homogeneous drought regions of India (2001–2019)",
-      "authors": "Animesh Choudhury",
-      "venue": "Discover Water",
-      "year": 2024,
-      "citations": 10,
-      "type": "journal"
-    },
-    {
-      "title": "Urban Heat: UHI and Heat Stress Threat to Megacities",
-      "authors": "Jagabandhu Panda and Asmita Mukherjee and Animesh Choudhury and Sreyasi Biswas",
-      "venue": "Unknown venue",
-      "year": 2024,
-      "citations": 8,
-      "type": "conference"
-    },
-    {
-      "title": "BharatBench: Dataset for data-driven weather forecasting over India",
-      "authors": "Animesh Choudhury and Jagabandhu Panda and Asmita Mukherjee",
-      "venue": "arXiv preprint arXiv:2405.07534",
-      "year": 2024,
-      "citations": 5,
-      "type": "journal"
-    },
-    {
-      "title": "Analyzing urban footprints over four coastal cities of India and the association with rainfall and temperature using deep learning models",
-      "authors": "Asmita Mukherjee and Jagabandhu Panda and Animesh Choudhury and Sanjeev Singh and Saugat Bhattacharyya",
-      "venue": "Urban Climate",
-      "year": 2024,
-      "citations": 4,
-      "type": "journal"
-    },
-    {
-      "title": "A Step Towards Building Medium-Range Data-Driven Weather Forecasting System Over India4",
-      "authors": "Animesh Choudhury and Jagabandhu Panda",
-      "venue": "Unknown venue",
-      "year": 2024,
-      "citations": 0,
-      "type": "conference"
-    },
-    {
-      "title": "Machine Learning and Deep Learning Applications in Weather and Climate Studies: A Systematic Review",
-      "authors": "Asmita Mukherjee and Jagabandhu Panda and Animesh Choudhury and Ram Kumar Giri",
-      "venue": "Unknown venue",
-      "year": 2023,
-      "citations": 0,
-      "type": "conference"
-    },
-    {
-      "title": "Transport of a severe dust storm from Middle East to Indian region and its impact on surrounding environment",
-      "authors": "S Budakoti and C Singh and A Choudhury",
-      "venue": "International Journal of Environmental Science and Technology",
-      "year": 2022,
-      "citations": 6,
-      "type": "journal"
+      "type": "journal",
+      "doi": "https://doi.org/10.3390/rs13040655"
     },
     {
       "title": "Regional variation of drought parameters and long-term trends over India using standardized precipitation evapotranspiration index",
-      "authors": "Animesh Choudhury and Dipanwita Dutta and Debarati Bera and Arnab Kundu",
+      "authors": "Choudhury A, Dutta D, Bera D, Kundu A",
       "venue": "Journal of Environmental Management",
       "year": 2021,
-      "citations": 42,
-      "type": "journal"
+      "citations": 0,
+      "type": "journal",
+      "doi": "https://doi.org/10.1016/j.jenvman.2021.113056"
     },
     {
-      "title": "A response of snow cover to the climate in the Northwest Himalaya (NWH) using satellite products",
-      "authors": "Animesh Choudhury and Avinash Chand Yadav and Stefania Bonafoni",
-      "venue": "Remote Sensing",
-      "year": 2021,
-      "citations": 27,
-      "type": "journal"
-    },
-    {
-      "title": "Role of earth observation data and hydrological modeling in supporting un SDGS in North West Himalaya",
-      "authors": "SP Aggarwal and Praveen K Thakur and Bhaskar R Nikam and Vaibhav Garg and Arpit Chouksey and PR Dhote and Sanjay Bisht and Ankur Dixit and Sidharth Arora and Animesh Choudhury and Vishal Sharma and Prakash Chauhan and A Senthil Kumar",
-      "venue": "The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences",
-      "year": 2020,
-      "citations": 4,
-      "type": "journal"
-    },
-    {
-      "title": "Monitoring of surface water of east Kolkata wetlands (1984–2015) with global surface water dataset",
-      "authors": "Animesh Choudhury and Avinash Chand Yadav",
-      "venue": "Conference: ACRS",
-      "year": 2020,
-      "citations": 1,
-      "type": "journal"
+      "title": "Transport of a severe dust storm from Middle East to Indian region and its impact on surrounding environment",
+      "authors": "Budakoti S, Singh C, Choudhury A",
+      "venue": "International Journal of Environmental Science and Technology",
+      "year": 2022,
+      "citations": 0,
+      "type": "journal",
+      "doi": "https://doi.org/10.1007/s13762-022-04520-1"
     }
   ],
   "conference_papers": [

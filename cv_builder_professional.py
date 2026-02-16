@@ -302,7 +302,7 @@ class CVBuilder:
             # Email icon
             if self.cv_data.personal_info.get('email'):
                 email = self.cv_data.personal_info['email']
-                email_icon = self._create_clickable_icon('email.png', f'mailto:{email}')
+                email_icon = self._create_clickable_icon('images/email.png', f'mailto:{email}')
                 if email_icon:
                     icon_row.append(email_icon)
             
@@ -312,28 +312,28 @@ class CVBuilder:
                 # Remove spaces and special characters for WhatsApp link
                 phone_clean = phone.replace('+', '').replace(' ', '').replace('-', '').replace('(', '').replace(')', '')
                 whatsapp_url = f'https://wa.me/{phone_clean}'
-                phone_icon = self._create_clickable_icon('phone.png', whatsapp_url)
+                phone_icon = self._create_clickable_icon('images/phone.png', whatsapp_url)
                 if phone_icon:
                     icon_row.append(phone_icon)
             
             # LinkedIn icon
             if self.cv_data.personal_info.get('linkedin'):
                 linkedin_url = self.cv_data.personal_info['linkedin']
-                linkedin_icon = self._create_clickable_icon('linkedin.png', linkedin_url)
+                linkedin_icon = self._create_clickable_icon('images/linkedin.png', linkedin_url)
                 if linkedin_icon:
                     icon_row.append(linkedin_icon)
             
             # GitHub icon
             if self.cv_data.personal_info.get('github'):
                 github_url = self.cv_data.personal_info['github']
-                github_icon = self._create_clickable_icon('github.png', github_url)
+                github_icon = self._create_clickable_icon('images/github.png', github_url)
                 if github_icon:
                     icon_row.append(github_icon)
             
             # Google Scholar icon
             if self.cv_data.personal_info.get('google_scholar'):
                 scholar_url = self.cv_data.personal_info['google_scholar']
-                scholar_icon = self._create_clickable_icon('google_scholar.png', scholar_url)
+                scholar_icon = self._create_clickable_icon('images/google_scholar.png', scholar_url)
                 if scholar_icon:
                     icon_row.append(scholar_icon)
             
@@ -343,9 +343,9 @@ class CVBuilder:
                 if not scholar_url.startswith('http'):
                     scholar_url = 'https://' + scholar_url
                 # Try scholar.png first, then researchgate.png
-                rg_icon = self._create_clickable_icon('scholar.png', scholar_url)
+                rg_icon = self._create_clickable_icon('images/scholar.png', scholar_url)
                 if not rg_icon:
-                    rg_icon = self._create_clickable_icon('researchgate.png', scholar_url)
+                    rg_icon = self._create_clickable_icon('images/researchgate.png', scholar_url)
                 if rg_icon:
                     icon_row.append(rg_icon)
             
@@ -408,7 +408,7 @@ class CVBuilder:
             # Email icon
             if self.cv_data.personal_info.get('email'):
                 email = self.cv_data.personal_info['email']
-                email_icon = self._create_clickable_icon('email.png', f'mailto:{email}')
+                email_icon = self._create_clickable_icon('images/email.png', f'mailto:{email}')
                 if email_icon:
                     icon_row.append(email_icon)
             
@@ -418,28 +418,28 @@ class CVBuilder:
                 # Remove spaces and special characters for WhatsApp link
                 phone_clean = phone.replace('+', '').replace(' ', '').replace('-', '').replace('(', '').replace(')', '')
                 whatsapp_url = f'https://wa.me/{phone_clean}'
-                phone_icon = self._create_clickable_icon('phone.png', whatsapp_url)
+                phone_icon = self._create_clickable_icon('images/phone.png', whatsapp_url)
                 if phone_icon:
                     icon_row.append(phone_icon)
             
             # LinkedIn icon
             if self.cv_data.personal_info.get('linkedin'):
                 linkedin_url = self.cv_data.personal_info['linkedin']
-                linkedin_icon = self._create_clickable_icon('linkedin.png', linkedin_url)
+                linkedin_icon = self._create_clickable_icon('images/linkedin.png', linkedin_url)
                 if linkedin_icon:
                     icon_row.append(linkedin_icon)
             
             # GitHub icon
             if self.cv_data.personal_info.get('github'):
                 github_url = self.cv_data.personal_info['github']
-                github_icon = self._create_clickable_icon('github.png', github_url)
+                github_icon = self._create_clickable_icon('images/github.png', github_url)
                 if github_icon:
                     icon_row.append(github_icon)
             
             # Google Scholar icon
             if self.cv_data.personal_info.get('google_scholar'):
                 scholar_url = self.cv_data.personal_info['google_scholar']
-                scholar_icon = self._create_clickable_icon('google_scholar.png', scholar_url)
+                scholar_icon = self._create_clickable_icon('images/google_scholar.png', scholar_url)
                 if scholar_icon:
                     icon_row.append(scholar_icon)
             
@@ -448,9 +448,9 @@ class CVBuilder:
                 scholar_url = self.cv_data.personal_info['scholar']
                 if not scholar_url.startswith('http'):
                     scholar_url = 'https://' + scholar_url
-                rg_icon = self._create_clickable_icon('scholar.png', scholar_url)
+                rg_icon = self._create_clickable_icon('images/scholar.png', scholar_url)
                 if not rg_icon:
-                    rg_icon = self._create_clickable_icon('researchgate.png', scholar_url)
+                    rg_icon = self._create_clickable_icon('images/researchgate.png', scholar_url)
                 if rg_icon:
                     icon_row.append(rg_icon)
             

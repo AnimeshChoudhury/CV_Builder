@@ -43,17 +43,22 @@ def main():
     print("\nThis script creates basic placeholder icons for your CV.")
     print("You can replace these with professional logos later.")
     
+    # Create images folder if it doesn't exist
+    if not os.path.exists('images'):
+        os.makedirs('images')
+        print("\n✓ Created 'images' folder")
+    
     print("\n" + "-" * 70)
     print("Creating icons...")
     print("-" * 70 + "\n")
     
-    # Define icons with colors
+    # Define icons with colors (saved to images folder)
     icons = [
-        ('E', (220, 78, 65), 'email.png'),       # Red for email
-        ('P', (76, 175, 80), 'phone.png'),       # Green for phone
-        ('L', (0, 119, 181), 'linkedin.png'),    # LinkedIn blue
-        ('G', (51, 51, 51), 'github.png'),       # Dark gray for GitHub
-        ('S', (66, 133, 244), 'scholar.png'),    # Google blue for Scholar
+        ('E', (220, 78, 65), 'images/email.png'),       # Red for email
+        ('P', (76, 175, 80), 'images/phone.png'),       # Green for phone
+        ('L', (0, 119, 181), 'images/linkedin.png'),    # LinkedIn blue
+        ('G', (51, 51, 51), 'images/github.png'),       # Dark gray for GitHub
+        ('S', (66, 133, 244), 'images/scholar.png'),    # Google blue for Scholar
     ]
     
     for letter, color, filename in icons:
@@ -68,13 +73,13 @@ def main():
     print("\n" + "=" * 70)
     print("DONE!")
     print("=" * 70)
-    print("\n✓ Logo icons created successfully!")
+    print("\n✓ Logo icons created successfully in images/ folder!")
     print("\nYou can now run: python cv_builder_professional.py")
     print("\nThese are basic placeholder icons. For a more professional look:")
     print("  1. Download actual logo images from:")
     print("     - https://icons8.com")
     print("     - https://www.flaticon.com")
-    print("  2. Replace the generated PNG files")
+    print("  2. Replace the PNG files in the images/ folder")
     print("  3. Regenerate your CV")
     
     print("\n" + "=" * 70)
