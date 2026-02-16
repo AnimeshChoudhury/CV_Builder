@@ -1,0 +1,291 @@
+{
+  "personal_info": {
+    "name": "Animesh Choudhury",
+    "title": "Junior Research Fellow | Remote Sensing & GIS Specialist",
+    "email": "official.animesh7@gmail.com",
+    "phone": "+91 9046567045",
+    "date_of_birth": "29 May 1992",
+    "nationality": "Indian",
+    "website": "",
+    "linkedin": "https://www.linkedin.com/in/animeshchoudhury/",
+    "github": "https://github.com/AnimeshChoudhury",
+    "scholar": "https://www.researchgate.net/profile/Animesh-Choudhury",
+    "address": "Pahartali, Ward No 9 Raghunathpur, Purulia, 723133 West Bengal, India",
+    "profile_image": "PassportImage.jpg",
+    "google_scholar": "https://scholar.google.com/citations?user=0p-FbaoAAAAJ&hl=en"
+  },
+  "summary": "Accomplished researcher specializing in Remote Sensing, GIS, and Climate Science with extensive experience in satellite data analysis, machine learning applications for environmental monitoring, and geospatial modeling. Strong background in drought monitoring, snow cover mapping, air quality analysis, and land-atmosphere interactions. Proficient in Python, R, Google Earth Engine, and various remote sensing tools.",
+  "education": [
+    {
+      "degree": "PGD (Post Graduate Diploma) in Remote Sensing and GIS",
+      "institution": "Indian Institute of Remote Sensing (IIRS)",
+      "location": "India",
+      "year": "2017-2018",
+      "thesis": ""
+    },
+    {
+      "degree": "M.Sc in Environmental Science",
+      "institution": "Asutosh College, Calcutta University",
+      "location": "India",
+      "year": "2015-2017"
+    },
+    {
+      "degree": "B.Sc in Physics",
+      "institution": "Raghunathpur College, Burdwan University",
+      "location": "India",
+      "year": "2009-2013"
+    }
+  ],
+  "experience": [
+    {
+      "position": "Junior Research Fellow",
+      "organization": "National Institute of Technology",
+      "location": "Rourkela, India",
+      "period": "Feb 2022 - Present",
+      "responsibilities": [
+        "Conducting research on land-atmosphere interaction during thunderstorms over major urban areas of India",
+        "Utilizing high-resolution mesoscale modeling framework and climatological datasets",
+        "Analyzing weather patterns and their impacts on urban environments"
+      ]
+    },
+    {
+      "position": "Junior Research Fellow",
+      "organization": "Department of Remote Sensing and GIS, Vidyasagar University",
+      "location": "Midnapore, India",
+      "period": "Jan 2020 - Feb 2022",
+      "responsibilities": [
+        "Developed ML models for prediction of agricultural droughts using subseasonal to seasonal forecasting",
+        "Conducted long-term monitoring of droughts using satellite-based indices",
+        "Estimated crop yield reduction using machine learning approaches",
+        "Organized National Workshop on Drought Monitoring and Early Warning using Geospatial Techniques"
+      ]
+    },
+    {
+      "position": "Junior Research Fellow",
+      "organization": "DST-Mahamana Centre of Excellence in Climate Change Research, BHU",
+      "location": "Varanasi, India",
+      "period": "Jun 2019 - Jan 2020",
+      "responsibilities": [
+        "Analyzed horizontal and vertical distribution of air pollutants over Indo-Gangetic plain",
+        "Utilized ground-based and satellite observations for air quality monitoring",
+        "Presented research on aerosol vertical distribution using CALIPSO LIDAR at AAPW-5"
+      ]
+    },
+    {
+      "position": "Junior Research Fellow",
+      "organization": "Indian Institute of Remote Sensing (IIRS)",
+      "location": "Dehradun, India",
+      "period": "Oct 2018 - Mar 2019",
+      "responsibilities": [
+        "Mapped snow cover area of Northwest Himalaya using MODIS, Sentinel, and Landsat datasets",
+        "Implemented analysis using Google Earth Engine platform",
+        "Installed and supervised automatic weather stations, snow precipitation gauges, and snow pack analyzers",
+        "Contributed to EOAM project on Mountain Ecosystem and Water Resource monitoring"
+      ]
+    },
+    {
+      "position": "Junior Research Fellow",
+      "organization": "CSIR - Institute of Himalayan Bioresource Technology",
+      "location": "Palampur, India",
+      "period": "Aug 2018 - Oct 2018",
+      "responsibilities": [
+        "Created spectral library of forest tree species found in Himalayan Region",
+        "Collected spectral signatures using ASD Fieldspec spectroradiometer",
+        "Correlated spectral data with bio-physical parameters",
+        "Classified tree species using satellite-based hyperspectral data"
+      ]
+    }
+  ],
+  "publications": [
+    {
+      "title": "Development of a Data-driven weather forecasting system over India with Pangu-Weather architecture and IMDAA reanalysis Data",
+      "authors": "Animesh Choudhury and Jagabandhu Panda",
+      "venue": "arXiv preprint arXiv:2503.12956",
+      "year": 2025,
+      "citations": 2,
+      "type": "journal"
+    },
+    {
+      "title": "Urban Modulation of Local Weather Over Geographically Distinct Cities, and Future Prospects",
+      "authors": "Jagabandhu Panda and Sudhansu S Rath and Asmita Mukherjee and Srutisudha Mohanty and XX Li and TY Koh and Leisle K Norford and Mathias Roth and Saugat Bhattacharyya and Debjyoti Roy and Animesh Choudhury and Nistha Nagar and Sanjeev Singh and Sreyasi Biswas and Sudeshna Das",
+      "venue": "Unknown venue",
+      "year": 2025,
+      "citations": 0,
+      "type": "conference"
+    },
+    {
+      "title": "Analysis and Forecasting of Temporal Rainfall Variability Over Hundred Indian Cities Using Deep Learning Approaches: S. Singh et al.",
+      "authors": "Sanjeev Singh and Asmita Mukherjee and Jagabandhu Panda and Animesh Choudhury and Saugat Bhattacharyya",
+      "venue": "Earth Systems and Environment",
+      "year": 2024,
+      "citations": 10,
+      "type": "journal"
+    },
+    {
+      "title": "Drought trend and its association with land surface temperature (LST) over homogeneous drought regions of India (2001–2019)",
+      "authors": "Animesh Choudhury",
+      "venue": "Discover Water",
+      "year": 2024,
+      "citations": 10,
+      "type": "journal"
+    },
+    {
+      "title": "Urban Heat: UHI and Heat Stress Threat to Megacities",
+      "authors": "Jagabandhu Panda and Asmita Mukherjee and Animesh Choudhury and Sreyasi Biswas",
+      "venue": "Unknown venue",
+      "year": 2024,
+      "citations": 8,
+      "type": "conference"
+    },
+    {
+      "title": "BharatBench: Dataset for data-driven weather forecasting over India",
+      "authors": "Animesh Choudhury and Jagabandhu Panda and Asmita Mukherjee",
+      "venue": "arXiv preprint arXiv:2405.07534",
+      "year": 2024,
+      "citations": 5,
+      "type": "journal"
+    },
+    {
+      "title": "Analyzing urban footprints over four coastal cities of India and the association with rainfall and temperature using deep learning models",
+      "authors": "Asmita Mukherjee and Jagabandhu Panda and Animesh Choudhury and Sanjeev Singh and Saugat Bhattacharyya",
+      "venue": "Urban Climate",
+      "year": 2024,
+      "citations": 4,
+      "type": "journal"
+    },
+    {
+      "title": "A Step Towards Building Medium-Range Data-Driven Weather Forecasting System Over India4",
+      "authors": "Animesh Choudhury and Jagabandhu Panda",
+      "venue": "Unknown venue",
+      "year": 2024,
+      "citations": 0,
+      "type": "conference"
+    },
+    {
+      "title": "Machine Learning and Deep Learning Applications in Weather and Climate Studies: A Systematic Review",
+      "authors": "Asmita Mukherjee and Jagabandhu Panda and Animesh Choudhury and Ram Kumar Giri",
+      "venue": "Unknown venue",
+      "year": 2023,
+      "citations": 0,
+      "type": "conference"
+    },
+    {
+      "title": "Transport of a severe dust storm from Middle East to Indian region and its impact on surrounding environment",
+      "authors": "S Budakoti and C Singh and A Choudhury",
+      "venue": "International Journal of Environmental Science and Technology",
+      "year": 2022,
+      "citations": 6,
+      "type": "journal"
+    },
+    {
+      "title": "Regional variation of drought parameters and long-term trends over India using standardized precipitation evapotranspiration index",
+      "authors": "Animesh Choudhury and Dipanwita Dutta and Debarati Bera and Arnab Kundu",
+      "venue": "Journal of Environmental Management",
+      "year": 2021,
+      "citations": 42,
+      "type": "journal"
+    },
+    {
+      "title": "A response of snow cover to the climate in the Northwest Himalaya (NWH) using satellite products",
+      "authors": "Animesh Choudhury and Avinash Chand Yadav and Stefania Bonafoni",
+      "venue": "Remote Sensing",
+      "year": 2021,
+      "citations": 27,
+      "type": "journal"
+    },
+    {
+      "title": "Role of earth observation data and hydrological modeling in supporting un SDGS in North West Himalaya",
+      "authors": "SP Aggarwal and Praveen K Thakur and Bhaskar R Nikam and Vaibhav Garg and Arpit Chouksey and PR Dhote and Sanjay Bisht and Ankur Dixit and Sidharth Arora and Animesh Choudhury and Vishal Sharma and Prakash Chauhan and A Senthil Kumar",
+      "venue": "The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences",
+      "year": 2020,
+      "citations": 4,
+      "type": "journal"
+    },
+    {
+      "title": "Monitoring of surface water of east Kolkata wetlands (1984–2015) with global surface water dataset",
+      "authors": "Animesh Choudhury and Avinash Chand Yadav",
+      "venue": "Conference: ACRS",
+      "year": 2020,
+      "citations": 1,
+      "type": "journal"
+    }
+  ],
+  "conference_papers": [
+    {
+      "title": "Simulation of an Extreme Dust Episode using WRF-CHEM",
+      "venue": "IASTA 2018",
+      "year": 2018,
+      "url": "https://cas.iitd.ac.in/iasta2018/pdf/E-Proceedings_IASTA-2018.pdf"
+    },
+    {
+      "title": "Role of Earth Observation Data and Hydrological Modeling in Supporting UN SDGs in North West Himalaya",
+      "venue": "ISPRS Archives",
+      "year": 2020,
+      "url": "https://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/XLIII-B3-2020/853/2020/"
+    },
+    {
+      "title": "Monitoring of Surface Water of East Kolkata Wetlands (1984-2015) with Global Surface Water Dataset",
+      "venue": "ACRS 2020",
+      "year": 2020,
+      "url": "https://a-a-r-s.org/proceeding/ACRS2020/yi3x7w.pdf"
+    }
+  ],
+  "skills": {
+    "Remote Sensing Tools": [
+      "ENVI",
+      "SNAP",
+      "Idrisi",
+      "ERDAS Imagine"
+    ],
+    "GIS Software": [
+      "ArcGIS",
+      "QGIS",
+      "Google Earth Engine"
+    ],
+    "Programming": [
+      "Python",
+      "R",
+      "SQL",
+      "MySQL"
+    ],
+    "Data Science & ML": [
+      "Machine Learning",
+      "Deep Learning",
+      "Data Analysis",
+      "Data Visualization"
+    ],
+    "Domain Expertise": [
+      "Drought Monitoring",
+      "Snow Cover Mapping",
+      "Air Quality Analysis",
+      "Climate Modeling",
+      "Agricultural Remote Sensing"
+    ],
+    "Other Tools": [
+      "Microsoft Office",
+      "WRF-CHEM",
+      "CALIPSO LIDAR",
+      "MODIS",
+      "Sentinel",
+      "Landsat"
+    ]
+  },
+  "awards": [
+    {
+      "name": "Organizing Member and Speaker",
+      "organization": "National Workshop on Drought Monitoring and Early Warning",
+      "year": 2021
+    }
+  ],
+  "service": [
+    "Poster presentation at Asian Air Pollution Workshop (AAPW-5), November 2019",
+    "Attended webinar on Geospatial Techniques in Drought Characterization, September 2020",
+    "Attended National webinar on Environment and Ecosystem Restoration, June 2021",
+    "Completed 5-day training on Machine Learning and Deep Learning for Earth Observation, August 2021"
+  ],
+  "languages": {
+    "Bengali": "Native",
+    "English": "Fluent (C2)",
+    "Hindi": "Fluent (C2 Speaking, B2 Reading/Writing)"
+  }
+}

@@ -1,0 +1,16 @@
+# Core PDF generation
+reportlab>=4.0.0
+
+# Image processing (for profile images)
+Pillow>=10.0.0
+
+# Google Scholar integration (optional - for automatic publication fetching)
+scholarly>=1.7.0
+
+# Web scraping dependencies for scholarly
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+
+# Additional utilities
+python-dateutil>=2.8.0
