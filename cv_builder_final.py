@@ -1,6 +1,6 @@
 """
-Professional CV Builder for Researchers - Redesigned with Tight Layout
-Generates a clean, professional PDF CV with research publications
+Professional CV Builder for Researchers - Final Version
+Generates a clean, professional PDF CV with clickable publications and conference papers
 """
 
 from reportlab.lib.pagesizes import letter, A4
@@ -69,7 +69,7 @@ class CVData:
 
 
 class CVBuilder:
-    """Builds professional PDF CV with optional profile image - Tight Layout"""
+    """Builds professional PDF CV with optional profile image - Final Version"""
     
     def __init__(self, cv_data, include_image=True):
         self.cv_data = cv_data
@@ -150,7 +150,7 @@ class CVBuilder:
             leading=11
         ))
         
-        # Publication style - tight
+        # Publication style - tight with link
         self.styles.add(ParagraphStyle(
             name='CVPublication',
             parent=self.styles['Normal'],
@@ -556,11 +556,10 @@ class CVBuilder:
             return datetime(2099, 12, 31)
         
         # Try to extract date in DD/MM/YYYY or YYYY-MM-DD format
-        # Pattern: DD/MM/YYYY - YYYY-MM-DD or DD/MM/YYYY - DD/MM/YYYY
         patterns = [
-            r'(\d{2})/(\d{2})/(\d{4})',  # DD/MM/YYYY
-            r'(\d{4})-(\d{2})-(\d{2})',    # YYYY-MM-DD
-            r'(\d{1,2})/(\d{1,2})/(\d{4})', # D/M/YYYY
+            r'(\d{2})/(\d{2})/(\d{4})',
+            r'(\d{4})-(\d{2})-(\d{2})',
+            r'(\d{1,2})/(\d{1,2})/(\d{4})',
         ]
         
         for pattern in patterns:
@@ -568,9 +567,9 @@ class CVBuilder:
             if match:
                 groups = match.groups()
                 if len(groups) == 3:
-                    if len(groups[0]) == 4:  # YYYY-MM-DD format
+                    if len(groups[0]) == 4:
                         year, month, day = int(groups[0]), int(groups[1]), int(groups[2])
-                    else:  # DD/MM/YYYY format
+                    else:
                         day, month, year = int(groups[0]), int(groups[1]), int(groups[2])
                     return datetime(year, month, day)
         
@@ -581,18 +580,16 @@ class CVBuilder:
         if not period_str:
             return datetime(1900, 1, 1)
         
-        # Split by " - " to get start and end dates
         parts = period_str.split(' - ')
         if len(parts) >= 2:
             end_date = self._parse_date(parts[-1].strip())
             if end_date:
                 return end_date
         
-        # If no end date found, try to parse the whole period
         return self._parse_date(period_str) or datetime(1900, 1, 1)
     
     def _add_experience(self, story):
-        """Add work experience section"""
+        """Add work experience section - current onwards"""
         if not self.cv_data.experience:
             return
         self._add_section_header(story, "Work Experience")
@@ -626,7 +623,7 @@ class CVBuilder:
             story.append(Spacer(1, 0.05*inch))
     
     def _add_publications(self, story):
-        """Add publications section"""
+        """Add publications section with clickable DOI links"""
         if not self.cv_data.publications:
             return
         self._add_section_header(story, "Selected Publications")
@@ -637,14 +634,17 @@ class CVBuilder:
                            reverse=True)
         
         for i, pub in enumerate(sorted_pubs, 1):
-            # Format: [1] Authors. "Title." Venue, Year. [Citations: X]
-            pub_text = f"[{i}] {pub.get('authors', 'Unknown')}. <b>\"{pub.get('title', 'Untitled')}\"</b> "
+            # Format: [1] Authors. "Title." Venue, Year. [Clickable DOI]
+            pub_text = f"[{i}] {pub.get('authors', 'Unknown')}. "
+            
+            # Add clickable title if DOI available
+            if pub.get('doi'):
+                pub_text += f'<link href="{pub["doi"]}" color="blue"><b>{pub.get("title", "Untitled")}</b></link>. '
+            else:
+                pub_text += f"<b>{pub.get('title', 'Untitled')}</b>. "
+            
             pub_text += f"<i>{pub.get('venue', 'Unknown Venue')}</i>, {pub.get('year', 'N/A')}."
             
-            if pub.get('doi'):
-                # Shorten DOI for display
-                doi_display = pub['doi'].replace('https://doi.org/', 'doi:')
-                pub_text += f" {doi_display}"
             if pub.get('citations', 0) > 0:
                 pub_text += f" <font color='#666666'>[{pub['citations']} citations]</font>"
             
@@ -654,13 +654,18 @@ class CVBuilder:
         story.append(Spacer(1, 0.06*inch))
     
     def _add_conference_papers(self, story):
-        """Add conference papers section"""
+        """Add conference papers section with clickable URL links"""
         if not self.cv_data.conference_papers:
             return
         self._add_section_header(story, "Conference Papers & Proceedings")
         
         for i, paper in enumerate(self.cv_data.conference_papers, 1):
-            paper_text = f"[{i}] <b>\"{paper.get('title', 'Untitled')}\"</b> "
+            # Add clickable title if URL available
+            if paper.get('url'):
+                paper_text = f'[{i}] <link href="{paper["url"]}" color="blue"><b>{paper.get("title", "Untitled")}</b></link>. '
+            else:
+                paper_text = f'[{i}] <b>{paper.get("title", "Untitled")}</b>. '
+            
             paper_text += f"<i>{paper.get('venue', 'Unknown Venue')}</i>, {paper.get('year', 'N/A')}."
             
             conf_paper = Paragraph(paper_text, self.styles['CVPublication'])
@@ -684,48 +689,47 @@ class CVBuilder:
         
         story.append(Spacer(1, 0.06*inch))
     
-    def _add_languages(self, story):
-        """Add languages section"""
-        if not self.cv_data.languages:
+    def _add_posters_training_webinar(self, story):
+        """Add poster presentations, training, and webinars section (combining awards and service)"""
+        has_awards = bool(self.cv_data.awards)
+        has_service = bool(self.cv_data.service)
+        
+        if not has_awards and not has_service:
             return
-        self._add_section_header(story, "Languages")
         
-        lang_parts = []
-        for lang, level in self.cv_data.languages.items():
-            lang_parts.append(f"<b>{lang}:</b> {level}")
+        self._add_section_header(story, "Poster, Online Training, Webinar")
         
-        lang_text = " | ".join(lang_parts)
-        languages = Paragraph(lang_text, self.styles['CVBody'])
-        story.append(languages)
-        story.append(Spacer(1, 0.06*inch))
-    
-    def _add_awards(self, story):
-        """Add awards and honors section"""
-        if not self.cv_data.awards:
-            return
-        self._add_section_header(story, "Awards & Recognition")
-        
+        # Add awards (poster presentations)
         for award in self.cv_data.awards:
             award_text = f"• <b>{award.get('name', 'Award')}</b>"
+            if award.get('description'):
+                award_text += f' on "{award["description"]}"'
             if award.get('organization'):
-                award_text += f", {award['organization']}"
-            if award.get('year'):
-                award_text += f" <font color='#666666'>({award['year']})</font>"
+                award_text += f' in the {award["organization"]}'
+            if award.get('location'):
+                award_text += f' held at {award["location"]}'
+            if award.get('date'):
+                award_text += f' during {award["date"]}'
             award_para = Paragraph(award_text, self.styles['CVBullet'])
             story.append(award_para)
         
-        story.append(Spacer(1, 0.06*inch))
-    
-    def _add_service(self, story):
-        """Add professional service section"""
-        if not self.cv_data.service:
-            return
-        self._add_section_header(story, "Professional Development")
+        # Add training and webinars from service
+        for item in self.cv_data.service:
+            if item.get('type') == 'webinar':
+                text = f'• Attended a webinar on "{item.get("name", "")}" organized by {item.get("organization", "")}'
+                if item.get('date'):
+                    text += f' on {item["date"]}'
+                story.append(Paragraph(text, self.styles['CVBullet']))
+            elif item.get('type') == 'training':
+                name = item.get('name', '')
+                period = item.get('period', '')
+                if 'day' in period.lower() or 'week' in period.lower():
+                    text = f'• Attended {period} training program on "{name}" organized by {item.get("organization", "")}'
+                else:
+                    text = f'• Completed the "{name}" organised by {item.get("organization", "")} during {period}'
+                story.append(Paragraph(text, self.styles['CVBullet']))
         
-        for service in self.cv_data.service:
-            service_text = f"• {service}"
-            service_para = Paragraph(service_text, self.styles['CVBullet'])
-            story.append(service_para)
+        story.append(Spacer(1, 0.06*inch))
     
     def build_cv(self, filename="professional_cv.pdf"):
         """Build the complete CV PDF with tight layout"""
@@ -740,17 +744,15 @@ class CVBuilder:
         
         story = []
         
-        # Add all sections
+        # Add all sections in correct order
         self._add_header(story)
         self._add_summary(story)
-        self._add_education(story)
-        self._add_experience(story)
-        self._add_publications(story)
-        self._add_conference_papers(story)
+        self._add_education(story)          # Education before Work Experience
+        self._add_experience(story)          # Work Experience after Education
+        self._add_publications(story)        # Publications with clickable links
+        self._add_conference_papers(story)   # Conference papers with clickable links
         self._add_skills(story)
-        self._add_languages(story)
-        self._add_awards(story)
-        self._add_service(story)
+        self._add_posters_training_webinar(story)  # Combined section
         
         # Add footer
         story.append(Spacer(1, 0.15*inch))
@@ -767,7 +769,7 @@ class CVBuilder:
 def main():
     """Main function to generate CV"""
     print("=" * 70)
-    print("Professional CV Builder - Redesigned Layout")
+    print("Professional CV Builder - Final Version")
     print("=" * 70)
     
     # Create CV data instance
@@ -810,11 +812,14 @@ def main():
     print("=" * 70)
     print(f"\nOutput file: {output_file}")
     print(f"Data file: {json_file}")
-    print("\nLayout improvements:")
-    print("  ✓ Fixed name/title overlapping")
-    print("  ✓ Tight, professional spacing")
-    print("  ✓ Clean, modern design")
-    print("  ✓ Better use of page space")
+    print("\nFeatures:")
+    print("  ✓ Clickable publication links (DOI)")
+    print("  ✓ Clickable conference paper links (URL)")
+    print("  ✓ Removed Languages section")
+    print("  ✓ Removed separate Awards & Recognition section")
+    print("  ✓ Combined POSTER, ONLINE TRAINING, WEBINAR section")
+    print("  ✓ Education before Work Experience")
+    print("  ✓ Work experience sorted current onwards")
     
 
 if __name__ == "__main__":

@@ -1,136 +1,238 @@
 {
   "personal_info": {
     "name": "Animesh Choudhury",
-    "title": "Senior Research Fellow | Remote Sensing & GIS Specialist",
-    "email": "official.animesh7@gmail.com",
+    "title": "PhD Researcher in Earth & Atmospheric Sciences | ML for Weather Forecasting | Remote Sensing Specialist",
+    "email": "animesh.buddha@gmail.com",
     "phone": "+91 9046567045",
-    "date_of_birth": "29 May 1992",
+    "date_of_birth": "29/05/1992",
     "nationality": "Indian",
-    "website": "",
+    "gender": "Male",
     "linkedin": "https://www.linkedin.com/in/animeshchoudhury/",
     "github": "https://github.com/AnimeshChoudhury",
     "scholar": "https://www.researchgate.net/profile/Animesh-Choudhury",
-    "address": "Pahartali, Ward No 9 Raghunathpur, Purulia, 723133 West Bengal, India",
-    "profile_image": "profileImage.jpg",
-    "google_scholar": "https://scholar.google.com/citations?user=0p-FbaoAAAAJ&hl=en"
+    "google_scholar": "https://scholar.google.com/citations?user=0p-FbaoAAAAJ&hl=en",
+    "address": "Pahartali, Ward No 9, Raghunathpur, Purulia, 723133, West Bengal, India",
+    "profile_image": "profileImage.png"
   },
-  "summary": "Accomplished researcher specializing in Remote Sensing, GIS, and Climate Science with extensive experience in satellite data analysis, machine learning applications for environmental monitoring, and geospatial modeling. Strong background in drought monitoring, snow cover mapping, air quality analysis, and land-atmosphere interactions. Proficient in Python, R, Google Earth Engine, and various remote sensing tools.",
+  "summary": "PhD researcher with 6+ years of experience in Earth and Atmospheric Sciences, specializing in data-driven weather forecasting, machine learning for climate science, and geospatial analysis. Currently developing cutting-edge weather prediction systems using Pangu-Weather architecture and IMDAA reanalysis data at NIT Rourkela. Proven track record with publications (120+ citations) in high-impact journals including Remote Sensing, Journal of Environmental Management, and Urban Climate. Expert in WRF mesoscale modeling, deep learning for atmospheric sciences, drought monitoring, and satellite remote sensing with proficiency in Python, R, Google Earth Engine, and advanced ML frameworks.",
   "education": [
     {
-      "degree": "PGD (Post Graduate Diploma) in Remote Sensing and GIS",
+      "degree": "PhD in Earth and Atmospheric Sciences",
+      "institution": "National Institute of Technology",
+      "location": "Rourkela, India",
+      "year": "2022 - Current",
+      "website": "https://www.nitrkl.ac.in/"
+    },
+    {
+      "degree": "Post Graduate Diploma in Remote Sensing & GIS",
       "institution": "Indian Institute of Remote Sensing (IIRS)",
-      "location": "India",
+      "location": "Dehradun, India",
       "year": "2017-2018",
-      "thesis": ""
+      "website": "https://www.iirs.gov.in/"
     },
     {
       "degree": "M.Sc in Environmental Science",
       "institution": "Asutosh College, Calcutta University",
-      "location": "India",
-      "year": "2015-2017"
+      "location": "Kolkata, India",
+      "year": "2015-2017",
+      "website": "https://www.asutoshcollege.in/"
     },
     {
       "degree": "B.Sc in Physics",
       "institution": "Raghunathpur College, Burdwan University",
-      "location": "India",
-      "year": "2009-2013"
+      "location": "West Bengal, India",
+      "year": "2009-2013",
+      "website": "https://www.raghunathpurcollege.ac.in/"
     }
   ],
   "experience": [
     {
-      "position": "Junior Research Fellow",
+      "position": "Junior Research Fellow (PhD Researcher)",
       "organization": "National Institute of Technology",
       "location": "Rourkela, India",
-      "period": "Feb 2022 - Present",
+      "period": "15/02/2022 - 30/06/2025",
+      "project": "Land-atmosphere interaction during thunderstorms over major urban areas of India using high-resolution mesoscale modeling framework and climatological data sets",
       "responsibilities": [
-        "Conducting research on land-atmosphere interaction during thunderstorms over major urban areas of India",
-        "Utilizing high-resolution mesoscale modeling framework and climatological datasets",
-        "Analyzing weather patterns and their impacts on urban environments"
+        "Developing data-driven weather forecasting systems using Pangu-Weather architecture and IMDAA reanalysis data",
+        "Creating BharatBench dataset for ML-based weather forecasting over India",
+        "Conducting high-resolution mesoscale modeling of urban thunderstorms using WRF",
+        "Analyzing land-atmosphere interactions and urban heat island effects"
       ]
     },
     {
       "position": "Junior Research Fellow",
       "organization": "Department of Remote Sensing and GIS, Vidyasagar University",
       "location": "Midnapore, India",
-      "period": "Jan 2020 - Feb 2022",
+      "period": "21/01/2020 - 07/02/2022",
+      "project": "Sub seasonal to Seasonal Forecast of Agricultural Drought and Estimation of Crop Yield Reduction using Machine Learning Approaches",
       "responsibilities": [
-        "Developed ML models for prediction of agricultural droughts using subseasonal to seasonal forecasting",
-        "Conducted long-term monitoring of droughts using satellite-based indices",
-        "Estimated crop yield reduction using machine learning approaches",
-        "Organized National Workshop on Drought Monitoring and Early Warning using Geospatial Techniques"
+        "Long-term monitoring of droughts using satellite-based indices (SPEI, VCI, TCI)",
+        "Developed ML models for prediction of agricultural droughts",
+        "Analyzed regional variation of drought parameters across India",
+        "Published research in Journal of Environmental Management"
       ]
     },
     {
       "position": "Junior Research Fellow",
-      "organization": "DST-Mahamana Centre of Excellence in Climate Change Research, BHU",
+      "organization": "DST-Mahamana Centre of Excellence in Climate Change Research, Banaras Hindu University",
       "location": "Varanasi, India",
-      "period": "Jun 2019 - Jan 2020",
+      "period": "13/06/2019 - 19/01/2020",
+      "project": "Air Quality Monitoring over Indo-Gangetic Plain",
       "responsibilities": [
-        "Analyzed horizontal and vertical distribution of air pollutants over Indo-Gangetic plain",
-        "Utilized ground-based and satellite observations for air quality monitoring",
-        "Presented research on aerosol vertical distribution using CALIPSO LIDAR at AAPW-5"
+        "Observation of horizontal and vertical distribution of air pollutants using CALIPSO LIDAR",
+        "Analyzed aerosol transport patterns over Indo-Gangetic plain",
+        "Integrated ground-based and satellite observations for air quality assessment"
       ]
     },
     {
       "position": "Junior Research Fellow",
-      "organization": "Indian Institute of Remote Sensing (IIRS)",
+      "organization": "Indian Institute of Remote Sensing",
       "location": "Dehradun, India",
-      "period": "Oct 2018 - Mar 2019",
+      "period": "21/10/2018 - 30/03/2019",
+      "project": "EOAM: Monitoring and Assessment of Mountain Eco-System and Services in NW Himalayas: Sub theme-4-Water Resource Status and Availability",
       "responsibilities": [
-        "Mapped snow cover area of Northwest Himalaya using MODIS, Sentinel, and Landsat datasets",
-        "Implemented analysis using Google Earth Engine platform",
-        "Installed and supervised automatic weather stations, snow precipitation gauges, and snow pack analyzers",
-        "Contributed to EOAM project on Mountain Ecosystem and Water Resource monitoring"
+        "Snow cover area mapping of Northwest Himalaya using MODIS, Sentinel, Landsat datasets with Google Earth Engine",
+        "Data collection, installation, and supervision of automatic weather station (AWS), snow precipitation gauge (SPG), and snow pack analyzer (SPA)",
+        "Published research in Remote Sensing journal"
       ]
     },
     {
       "position": "Junior Research Fellow",
       "organization": "CSIR - Institute of Himalayan Bioresource Technology",
       "location": "Palampur, India",
-      "period": "Aug 2018 - Oct 2018",
+      "period": "12/08/2018 - 14/10/2018",
+      "project": "Preparation of Spectral Library of Forest tree species found in Himalayan Region",
       "responsibilities": [
-        "Created spectral library of forest tree species found in Himalayan Region",
-        "Collected spectral signatures using ASD Fieldspec spectroradiometer",
+        "Collection of spectral signatures using ASD Fieldspec spectroradiometer",
         "Correlated spectral data with bio-physical parameters",
-        "Classified tree species using satellite-based hyperspectral data"
+        "Classification of tree species using satellite-based hyperspectral data"
       ]
     }
   ],
   "publications": [
     {
-      "title": "A Response of Snow Cover to the Climate in the Northwest Himalaya (NWH) Using Satellite Products",
-      "authors": "Choudhury A, Yadav AC, Bonafoni S",
-      "venue": "Remote Sensing",
-      "year": 2021,
+      "title": "Analysis and Prediction of PM2.5 Concentrations Over Indian Megacities Using Geospatial Techniques and Deep Learning Models",
+      "authors": "Panda, J., Mukherjee, A., Sarkar, A., Kumar, G., & Choudhury, A.",
+      "venue": "Geospatial Technologies",
+      "year": 2026,
+      "citations": 0,
+      "type": "book_chapter",
+      "doi": "https://doi.org/10.1201/9781003562986-8"
+    },    
+    {
+      "title": "A long-term analysis of pre-monsoon thunderstorm characteristic features over major urban areas of India",
+      "authors": "Roy, D., Panda, J., Mukherjee, A., Choudhury, A., & Panda, S. K.",
+      "venue": "Acta Geophysica",
+      "year": 2026,
       "citations": 0,
       "type": "journal",
-      "doi": "https://doi.org/10.3390/rs13040655"
+      "doi": "https://doi.org/10.1007/s11600-026-01806-7"
     },
     {
-      "title": "Regional variation of drought parameters and long-term trends over India using standardized precipitation evapotranspiration index",
-      "authors": "Choudhury A, Dutta D, Bera D, Kundu A",
-      "venue": "Journal of Environmental Management",
-      "year": 2021,
+      "title": "Development of a Data-driven weather forecasting system over India with Pangu-Weather architecture and IMDAA reanalysis Data",
+      "authors": "Choudhury, A., & Panda, J.",
+      "venue": "In Preparation",
+      "year": 2025,
       "citations": 0,
       "type": "journal",
-      "doi": "https://doi.org/10.1016/j.jenvman.2021.113056"
+      "doi": "https://arxiv.org/abs/2503.12956"
+    },
+    {
+      "title": "BharatBench: Dataset for data-driven weather forecasting over India",
+      "authors": "Choudhury, A., Panda, J., & Mukherjee, A.",
+      "venue": "In Preparation",
+      "year": 2024,
+      "citations": 0,
+      "type": "journal",
+      "doi": "https://arxiv.org/abs/2405.07534"
+    },
+    {
+      "title": "Analyzing urban footprints over four coastal cities of India and the association with rainfall and temperature using deep learning models",
+      "authors": "Mukherjee, A., Panda, J., Choudhury, A., Singh, S., & Bhattacharyya, S.",
+      "venue": "Urban Climate",
+      "year": 2024,
+      "volume": "57",
+      "pages": "102123",
+      "citations": 0,
+      "type": "journal",
+      "doi": "https://doi.org/10.1016/j.uclim.2024.102123"
+    },
+    {
+      "title": "Analysis and Forecasting of Temporal Rainfall Variability Over Hundred Indian Cities Using Deep Learning Approaches",
+      "authors": "Singh, S., Mukherjee, A., Panda, J. et al.",
+      "venue": "Earth Systems and Environment",
+      "year": 2024,
+      "volume": "8",
+      "pages": "599–625",
+      "citations": 0,
+      "type": "journal",
+      "doi": "https://doi.org/10.1007/s41748-024-00380-2"
+    },
+    {
+      "title": "Drought trend and its association with land surface temperature (LST) over homogeneous drought regions of India (2001–2019)",
+      "authors": "Choudhury, A.",
+      "venue": "Discover Water",
+      "year": 2024,
+      "volume": "4",
+      "pages": "51",
+      "citations": 0,
+      "type": "journal",
+      "doi": "https://doi.org/10.1007/s43832-024-00089-4"
+    },
+    {
+      "title": "Urban Heat: UHI and Heat Stress Threat to Megacities",
+      "authors": "Panda, J., Mukherjee, A., Choudhury, A., Biswas, S.",
+      "venue": "Climate Crisis: Adaptive Approaches and Sustainability. Sustainable Development Goals Series. Springer, Cham",
+      "year": 2023,
+      "citations": 0,
+      "type": "book_chapter",
+      "doi": "https://doi.org/10.1007/978-3-031-28728-2"
     },
     {
       "title": "Transport of a severe dust storm from Middle East to Indian region and its impact on surrounding environment",
-      "authors": "Budakoti S, Singh C, Choudhury A",
+      "authors": "Budakoti, S., Singh, C. & Choudhury, A.",
       "venue": "International Journal of Environmental Science and Technology",
       "year": 2022,
       "citations": 0,
       "type": "journal",
       "doi": "https://doi.org/10.1007/s13762-022-04520-1"
+    },
+    {
+      "title": "Regional variation of drought parameters and long-term trends over India using standardized precipitation evapotranspiration index",
+      "authors": "Choudhury, A., Dutta, D., Bera, D., Kundu, A.",
+      "venue": "Journal of Environmental Management",
+      "year": 2021,
+      "volume": "296",
+      "pages": "113056",
+      "citations": 0,
+      "type": "journal",
+      "doi": "https://doi.org/10.1016/j.jenvman.2021.113056"
+    },
+    {
+      "title": "A Response of Snow Cover to the Climate in the Northwest Himalaya (NWH) Using Satellite Products",
+      "authors": "Choudhury A, Yadav AC, Bonafoni S",
+      "venue": "Remote Sensing",
+      "year": 2021,
+      "volume": "13",
+      "issue": "4",
+      "pages": "655",
+      "citations": 0,
+      "type": "journal",
+      "doi": "https://doi.org/10.3390/rs13040655"
     }
   ],
   "conference_papers": [
     {
-      "title": "Simulation of an Extreme Dust Episode using WRF-CHEM",
-      "venue": "IASTA 2018",
-      "year": 2018,
-      "url": "https://cas.iitd.ac.in/iasta2018/pdf/E-Proceedings_IASTA-2018.pdf"
+      "title": "A Step Towards Building Medium-Range Data-Driven Weather Forecasting System Over India",
+      "venue": "IEEE Conference",
+      "year": 2024,
+      "url": "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10984239"
+    },
+    {
+      "title": "Monitoring of Surface Water of East Kolkata Wetlands (1984-2015) with Global Surface Water Dataset",
+      "venue": "ACRS 2020",
+      "year": 2020,
+      "url": "https://a-a-r-s.org/proceeding/ACRS2020/yi3x7w.pdf"
     },
     {
       "title": "Role of Earth Observation Data and Hydrological Modeling in Supporting UN SDGs in North West Himalaya",
@@ -139,68 +241,151 @@
       "url": "https://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/XLIII-B3-2020/853/2020/"
     },
     {
-      "title": "Monitoring of Surface Water of East Kolkata Wetlands (1984-2015) with Global Surface Water Dataset",
-      "venue": "ACRS 2020",
-      "year": 2020,
-      "url": "https://a-a-r-s.org/proceeding/ACRS2020/yi3x7w.pdf"
+      "title": "Simulation of an Extreme Dust Episode using WRF-CHEM",
+      "venue": "IASTA 2018",
+      "year": 2018,
+      "url": "https://cas.iitd.ac.in/iasta2018/pdf/E-Proceedings_IASTA-2018.pdf"
     }
   ],
   "skills": {
-    "Remote Sensing Tools": [
-      "ENVI",
-      "SNAP",
-      "Idrisi",
-      "ERDAS Imagine"
+    "Weather & Climate Modeling": [
+      "WRF-CHEM",
+      "Pangu-Weather",
+      "Mesoscale Modeling",
+      "IMDAA Reanalysis",
+      "Climatological Data Analysis"
     ],
-    "GIS Software": [
+    "Machine Learning & AI": [
+      "Deep Learning",
+      "TensorFlow",
+      "PyTorch",
+      "Time Series Forecasting",
+      "Neural Networks",
+      "Data-Driven Models"
+    ],
+    "Remote Sensing": [
+      "MODIS",
+      "Sentinel",
+      "Landsat",
+      "SNAP",
+      "ENVI",
+      "Idrisi",
+      "Hyperspectral Analysis",
+      "ASD Fieldspec"
+    ],
+    "GIS & Geospatial": [
+      "Google Earth Engine",
       "ArcGIS",
       "QGIS",
-      "Google Earth Engine"
+      "Spatial Analysis",
+      "Geospatial Modeling"
     ],
-    "Programming": [
+    "Programming & Data Science": [
       "Python",
       "R",
       "SQL",
-      "MySQL"
-    ],
-    "Data Science & ML": [
-      "Machine Learning",
-      "Deep Learning",
+      "Data Processing",
       "Data Analysis",
       "Data Visualization"
     ],
-    "Domain Expertise": [
+    "Climate Analysis": [
       "Drought Monitoring",
+      "SPEI/VCI/TCI Indices",
+      "Climate Trends",
       "Snow Cover Mapping",
-      "Air Quality Analysis",
-      "Climate Modeling",
-      "Agricultural Remote Sensing"
-    ],
-    "Other Tools": [
-      "Microsoft Office",
-      "WRF-CHEM",
-      "CALIPSO LIDAR",
-      "MODIS",
-      "Sentinel",
-      "Landsat"
+      "Atmospheric Science"
     ]
+  },
+  "languages": {
+    "Bengali": "Native",
+    "English": "Fluent (C2 - Listening, Reading, Speaking, Writing)",
+    "Hindi": "Fluent (C2 Speaking & Listening, B2 Reading & Writing)"
   },
   "awards": [
     {
+      "name": "Poster Presentation at AOGS 2025",
+      "organization": "22nd Annual Meeting of Asia Oceania Geosciences Society",
+      "location": "Sands Expo & Convention Centre Marina Bay Sands, Singapore",
+      "year": 2025,
+      "date": "27 Jul - 01 Aug, 2025",
+      "description": "Regional Data-driven Weather Forecasting Over India with Pangu-weather Architecture and IMDAA Reanalysis"
+    },
+    {
+      "name": "National Symposium Participation",
+      "organization": "Tropment-2024, Indian Meteorological Society",
+      "location": "NIT Rourkela",
+      "year": 2024,
+      "date": "10-12 December 2024"
+    },
+    {
       "name": "Organizing Member and Speaker",
-      "organization": "National Workshop on Drought Monitoring and Early Warning",
-      "year": 2021
+      "organization": "National Workshop on Drought Monitoring and Early Warning using Geospatial Techniques",
+      "location": "Department of Remote Sensing and GIS, Vidyasagar University",
+      "year": 2021,
+      "date": "24th February, 2021"
+    },
+    {
+      "name": "Poster Presentation at AAPW-5",
+      "organization": "Asian Air Pollution Workshop",
+      "year": 2019,
+      "date": "5th-7th November, 2019",
+      "description": "Aerosol vertical distribution over lower Gangetic plain using CALIPSO LIDAR"
     }
   ],
   "service": [
-    "Poster presentation at Asian Air Pollution Workshop (AAPW-5), November 2019",
-    "Attended webinar on Geospatial Techniques in Drought Characterization, September 2020",
-    "Attended National webinar on Environment and Ecosystem Restoration, June 2021",
-    "Completed 5-day training on Machine Learning and Deep Learning for Earth Observation, August 2021"
-  ],
-  "languages": {
-    "Bengali": "Native",
-    "English": "Fluent (C2)",
-    "Hindi": "Fluent (C2 Speaking, B2 Reading/Writing)"
-  }
+    {
+      "type": "training",
+      "name": "Recent Trends in Time Series Forecasting using Deep Learning Models",
+      "organization": "Department of Computer Science & Engineering, NIT Rourkela",
+      "period": "December 25-29, 2023"
+    },
+    {
+      "type": "training",
+      "name": "Deep Learning Application for Smart Cities",
+      "organization": "Department of Computer Science & Engineering, NIT Rourkela",
+      "period": "September 11-15, 2023"
+    },
+    {
+      "type": "training",
+      "name": "Machine Learning in Weather & Climate (MOOC)",
+      "organization": "ECMWF in partnership with IFAB",
+      "period": "January to April, 2023"
+    },
+    {
+      "type": "training",
+      "name": "Capacity Building - Training School on WRF Modeling System",
+      "organization": "C-DAC and SAMA under National Supercomputing Mission (NSM)",
+      "period": "3rd to 20th April 2023"
+    },
+    {
+      "type": "training",
+      "name": "Open Classroom Online Lecture Series in Atmospheric and Climate Sciences",
+      "organization": "SAMA and Centre for Atmospheric Sciences, SRM Institute",
+      "period": "7-24 April 2023"
+    },
+    {
+      "type": "training",
+      "name": "Geospatial Modeling Driven Urban Hazard and Risk Analysis",
+      "organization": "IIRS, Dehradun",
+      "period": "13-02-2023 to 17-02-2023"
+    },
+    {
+      "type": "training",
+      "name": "Machine Learning (ML) and Deep Learning (DL) for Earth Observation (EO) Data and Application",
+      "organization": "DA-IITC in Collaboration with SAC, ISRO",
+      "period": "9th-13th August, 2021"
+    },
+    {
+      "type": "webinar",
+      "name": "Environment and Ecosystem Restoration",
+      "organization": "Department of Physics, K.L.E.F., Vijaywada, Andhra Pradesh",
+      "date": "5th June, 2021"
+    },
+    {
+      "type": "webinar",
+      "name": "Geospatial Techniques in drought characterization and impact assessment",
+      "organization": "Albedo Foundation",
+      "date": "26th September, 2020"
+    }
+  ]
 }

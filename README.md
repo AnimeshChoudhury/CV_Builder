@@ -1,453 +1,298 @@
-# Professional CV Builder for Researchers
+# 📄 Academic CV Builder
 
-A Python-based CV generator that creates professional PDFs with automatic Google Scholar publication integration.
+A **Python-based PDF CV generator** tailored for academic researchers. It programmatically builds a professional, publication-ready Curriculum Vitae from a single JSON data file, with support for profile images, Google Scholar integration, and customizable styling — all without manual formatting in Word or LaTeX.
 
-## Features
+---
 
-✅ Clean, professional CV layout  
-✅ Google Scholar publication import  
-✅ Easy customization via JSON file  
-✅ Automatic citation counts  
-✅ Professional formatting  
-✅ Support for multiple sections (Education, Experience, Publications, Skills, Awards, Service)
-✅ Profile image support
-✅ Clickable logo icons for contact information
+## ✨ Features
 
-## Installation
+- **PDF Generation** — Produces a clean, professional-grade PDF using [ReportLab](https://www.reportlab.com/)
+- **Profile Image Support** — Embeds a headshot in the CV header with automatic aspect-ratio preservation
+- **JSON-Driven Data** — All CV content (personal info, education, experience, publications, skills, awards) is managed via a single editable JSON file
+- **Google Scholar Integration** — Optionally auto-fetches publications and citation counts via `scholar_fetcher.py`
+- **Publication Sections** — Separate handling for journal articles and conference papers, sorted by recency
+- **Custom Styling** — Configurable paragraph styles, fonts, colors, and layout without touching layout logic
+- **Lightweight & Portable** — No LaTeX installation required; runs in any standard Python environment
 
-### Required Packages
+---
 
-```
-bash
-pip install reportlab pillow
-```
-
-### Optional (for Google Scholar integration)
-
-```
-bash
-pip install scholarly requests beautifulsoup4 lxml python-dateutil
-```
-
-## Quick Start
-
-### 1. Generate Your First CV
-
-```
-bash
-python cv_builder_v2.py
-```
-
-This will generate a `Animesh_Choudhury_CV.pdf` with the data from `animesh_cv_data.json`.
-
-### 2. Customize Your Data
-
-Edit `animesh_cv_data.json` with your personal information:
-
-```
-json
-{
-  "personal_info": {
-    "name": "Your Name",
-    "title": "Your Title",
-    "email": "your.email@example.com",
-    "phone": "+91 1234567890",
-    "linkedin": "https://linkedin.com/in/yourprofile",
-    "github": "https://github.com/yourusername",
-    "profile_image": "profileImage.jpg"
-  },
-  "education": [...],
-  "experience": [...],
-  "publications": [...],
-  ...
-}
-```
-
-### 3. Regenerate CV
-
-After editing the JSON file:
-
-```
-bash
-python cv_builder_v2.py
-```
-
-Your CV will be regenerated with your updated information.
-
-## File Structure
+## 🗂️ Repository Structure
 
 ```
 CV_Builder/
-├── cv_builder_v2.py           # Main CV generator (with profile image support)
-├── cv_builder_professional.py # Professional CV with logo icons
-├── scholar_fetcher.py         # Google Scholar integration
-├── animesh_cv_data.json       # Your CV data (editable)
-├── Animesh_Choudhury_CV.pdf  # Generated CV output
-├── check_logos.py             # Diagnostic script for logo files
-├── generate_placeholder_icons.py # Generate placeholder logos
-├── images/                    # Logo icons folder
-│   ├── email.png
-│   ├── phone.png
-│   ├── linkedin.png
-│   ├── github.png
-│   └── scholar.png
-└── profileImage.jpg           # Your profile photo
+├── cv_builder_v2.py          # ✅ Main CV builder (primary entry point)
+├── animesh_cv_data.json      # CV content data (edit this to update your CV)
+├── scholar_fetcher.py        # Google Scholar publication fetcher
+├── check_logos.py            # Utility to verify image/logo assets
+├── generate_placeholder_icons.py  # Generates placeholder icons for testing
+├── requirements.txt          # Python dependencies
+├── profileImage.png          # Profile photo used in the CV header
+├── images/                   # Additional image assets
+│
+├── QUICK_START.md            # Step-by-step usage guide
+├── CONTACT_INFO_GUIDE.md     # Guide for formatting contact details
+├── GOOGLE_SCHOLAR_GUIDE.md   # Guide for Scholar ID setup and fetching
+├── LOGO_SETUP_GUIDE.md       # Guide for institutional logo usage
+│
+└── *.pdf                     # Generated CV outputs
 ```
 
-## Adding Your Profile Photo
+> **Note:** `cv_builder_final.py`, `cv_builder_professional.py`, and `cv_builder_updated.py` are earlier iterations. `cv_builder_v2.py` is the most current and recommended version.
 
-### Step 1: Prepare Your Photo
-- Use a professional headshot
-- Square format works best (e.g., 500x500 pixels)
-- Supported formats: JPG, PNG, JPEG
-- File size: Keep under 2MB
+---
 
-### Step 2: Add Photo to Your Directory
-Place your photo file (e.g., `profileImage.jpg`) in the same folder as the CV builder.
+## 🚀 Getting Started
 
-### Step 3: Update JSON File
-Open `animesh_cv_data.json` and find the `personal_info` section:
+### 1. Clone the Repository
 
-```
-json
-"personal_info": {
-  "name": "Your Name",
-  "profile_image": "profileImage.jpg",  ← Add this line with your filename
-  ...
-}
+```bash
+git clone https://github.com/AnimeshChoudhury/CV_Builder.git
+cd CV_Builder
 ```
 
-### Step 4: Regenerate CV
+### 2. Set Up a Virtual Environment (Recommended)
+
+```bash
+python -m venv venv
+
+# Windows
+venv\Scripts\activate
+
+# macOS / Linux
+source venv/bin/activate
 ```
-bash
+
+### 3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+**Core dependencies:**
+
+| Package | Purpose |
+|---|---|
+| `reportlab >= 4.0.0` | PDF generation engine |
+| `Pillow >= 10.0.0` | Profile image processing |
+| `scholarly >= 1.7.0` | Google Scholar API (optional) |
+| `requests >= 2.31.0` | HTTP requests for Scholar |
+| `beautifulsoup4 >= 4.12.0` | Web scraping for Scholar |
+| `python-dateutil >= 2.8.0` | Date parsing utilities |
+
+### 4. Generate Your CV
+
+```bash
 python cv_builder_v2.py
 ```
 
-When prompted "Include profile image in CV? (y/n)", press `y` or just Enter.
-
-## Logo Icons Setup
-
-### What You Need
-
-The CV builder supports clickable logo icons for your contact information. Logo files should be placed in the `images/` folder:
-
-1. **images/email.png** - Email/envelope icon
-2. **images/phone.png** - Phone icon
-3. **images/linkedin.png** - LinkedIn logo
-4. **images/github.png** - GitHub logo
-5. **images/scholar.png** OR **images/researchgate.png** - Your research profile logo
-
-### Logo Specifications
-
-- **Format**: PNG (preferred) or JPG
-- **Transparency**: Transparent background works best
-- **Size**: 32x32 to 64x64 pixels recommended
-- **File size**: Keep under 50KB each
-
-### Getting Professional Logos
-
-1. **Icons8** (https://icons8.com) - Search for email, phone, linkedin, github
-2. **Flaticon** (https://www.flaticon.com) - Download social media icons
-3. **Official Brand Logos**:
-   - LinkedIn: https://brand.linkedin.com/downloads
-   - GitHub: https://github.com/logos
-
-### Generate Placeholder Icons
-
-If you don't have logos, you can generate simple placeholders:
-
-```
-bash
-python generate_placeholder_icons.py
-```
-
-This will create basic colored square icons with letters in the `images/` folder.
-
-### Check Logo Setup
-
-Run the diagnostic script to verify your logo files:
-
-```
-bash
-python check_logos.py
-```
-
-## Google Scholar Integration
-
-### Automatic Publication Fetching
-
-1. **Find Your Scholar ID**
-   - Go to your Google Scholar profile
-   - URL looks like: `https://scholar.google.com/citations?user=YOUR_ID`
-   - Copy YOUR_ID part
-
-2. **Run the Fetcher**
-   
-```
-bash
-   python scholar_fetcher.py
-   
-```
-
-3. **Enter Your Scholar ID** when prompted
-
-4. **Regenerate CV**
-   
-```
-bash
-   python cv_builder_v2.py
-   
-```
-
 The script will:
-- ✅ Fetch all your publications
-- ✅ Get citation counts for each paper
-- ✅ Update `animesh_cv_data.json` automatically
-- ✅ Preserve all other CV data
+1. Load your CV content from `animesh_cv_data.json`
+2. Detect and optionally embed your profile image
+3. Generate `Animesh_Choudhury_CV.pdf` in the current directory
 
-### Manual Scholar Integration
+---
 
-You can also manually update your Scholar URL in `cv_data.json`:
+## 🔧 Customizing Your CV
 
-```
-json
-{
-  "personal_info": {
-    "scholar": "scholar.google.com/citations?user=YOUR_ID"
-  }
-}
-```
+### Edit CV Content
 
-### Troubleshooting Scholar Issues
+All CV data lives in `animesh_cv_data.json`. Open it and update any section:
 
-- **Rate limiting**: Google may limit requests. Wait a few minutes and try again
-- **Profile not public**: Make sure your Google Scholar profile is set to public
-- **Missing publications**: Manually add publications to JSON as fallback
-
-## Contact Information Layout
-
-### New Design Features
-
-1. **Fixed Icons** - Using proper Unicode symbols that display correctly
-2. **Clickable Links** - All links are now clickable
-3. **Multi-line Layout** - Organized into 3 separate lines for clarity
-4. **Color-coded Links** - Different colors for different platforms
-
-### Contact Info Structure
-
-**Line 1: Email & Phone**
-```
-✉ your.email@example.com | ☎ +91 1234567890
-```
-
-**Line 2: LinkedIn**
-```
-🔗 LinkedIn Profile
-```
-
-**Line 3: GitHub & Research Profile**
-```
-⚙ GitHub Profile | 🎓 Research Profile
-```
-
-### How Links Work
-
-- **Email** → Opens email client with address pre-filled
-- **LinkedIn Profile** → Opens LinkedIn page in browser
-- **GitHub Profile** → Opens GitHub page in browser
-- **Research Profile** → Opens ResearchGate/Scholar page in browser
-
-## Data Structure
-
-### Personal Info
-```
-json
-{
-  "name": "Your Name",
+**Personal Information:**
+```json
+"personal_info": {
+  "name": "Your Full Name",
   "title": "Your Professional Title",
   "email": "your.email@example.com",
-  "phone": "+91 1234567890",
+  "phone": "+91 XXXXXXXXXX",
   "linkedin": "https://linkedin.com/in/yourprofile",
   "github": "https://github.com/yourusername",
-  "scholar": "https://www.researchgate.net/profile/Your-Name",
-  "profile_image": "profileImage.jpg"
+  "scholar": "https://www.researchgate.net/profile/your-profile",
+  "google_scholar": "https://scholar.google.com/citations?user=YOUR_ID",
+  "profile_image": "your_photo.png"
 }
 ```
 
-### Publications
-```
-json
+**Adding a Publication:**
+```json
 {
-  "publications": [
-    {
-      "title": "Your Paper Title",
-      "authors": "Author1, Author2, Author3",
-      "venue": "Journal or Conference Name",
-      "year": 2024,
-      "citations": 50,
-      "type": "journal",
-      "doi": "https://doi.org/10.xxxx/xxxxx"
-    }
+  "title": "Your Paper Title",
+  "authors": "Author A, Author B, & Author C",
+  "venue": "Journal of Example Research",
+  "year": 2025,
+  "citations": 12,
+  "type": "journal",
+  "doi": "https://doi.org/10.xxxx/xxxxx"
+}
+```
+
+**Adding Work Experience:**
+```json
+{
+  "position": "Research Fellow",
+  "organization": "University Name",
+  "location": "City, Country",
+  "period": "Jan 2022 - Present",
+  "responsibilities": [
+    "Key responsibility 1",
+    "Key responsibility 2"
   ]
 }
 ```
 
-### Skills
-```
-json
-{
-  "skills": {
-    "Programming": ["Python", "R", "SQL"],
-    "Tools": ["ArcGIS", "QGIS", "Google Earth Engine"],
-    "Domain Expertise": ["Remote Sensing", "GIS", "Machine Learning"]
-  }
-}
-```
+### Customizing Visual Styles
 
-## Customization Guide
+Open `cv_builder_v2.py` and locate the `_setup_custom_styles()` method (~line 82). Modify paragraph style properties:
 
-### Adding Sections
-
-The CV includes these sections:
-- **Professional Summary**: Brief overview
-- **Education**: Degrees and institutions
-- **Professional Experience**: Work history
-- **Selected Publications**: Research papers
-- **Conference Papers**: Conference presentations
-- **Technical Skills & Expertise**: Skills by category
-- **Awards**: Recognition
-- **Professional Service**: Committee work, reviewing, etc.
-- **Languages**: Language proficiencies
-
-### Publication Format
-
-Publications are automatically formatted as:
-
-```
-[1] Authors. "Title." Venue, Year. [Citations: X]
+```python
+self.styles.add(ParagraphStyle(
+    name='CVSectionHeading',
+    fontSize=13,                            # Adjust font size
+    textColor=colors.HexColor('#1a5490'),   # Change accent color
+    fontName='Helvetica-Bold',
+    spaceAfter=8,
+))
 ```
 
-### Styling
+Key style names and their usage:
 
-To customize the appearance, edit the `_setup_custom_styles()` method in `cv_builder_professional.py`:
-
-- Font sizes
-- Colors
-- Spacing
-- Alignment
-
-## Tips for Researchers
-
-### Publication Management
-
-1. **Keep publications updated**: Run `scholar_fetcher.py` regularly to update citation counts
-2. **Select your best work**: Edit the `publications` list in `cv_data.json` to highlight specific papers
-3. **Categorize publications**: You can manually add a `category` field to group publications
-
-### Maintaining Multiple Versions
-
-Create different JSON files for different purposes:
-
-```
-bash
-# Academic CV (full version)
-python cv_builder_v2.py
-
-# Industry CV (edit JSON to focus on applied work)
-python cv_builder_v2.py
-
-# Short CV (edit JSON to include only recent highlights)
-python cv_builder_v2.py
-```
-
-## Troubleshooting
-
-### PDF Generation Issues
-
-If PDF generation fails:
-- Ensure `reportlab` is installed: `pip install reportlab pillow`
-- Check file permissions in the output directory
-- Verify JSON file is valid (use a JSON validator)
-
-### Profile Image Issues
-
-**Problem: Profile image not showing**
-- Check the file path is correct in JSON
-- Make sure image file is in the same directory
-- Try using a different image format (JPG or PNG)
-
-### Logo Icon Issues
-
-**Problem: Logo icons not showing**
-- Run `python check_logos.py` to diagnose
-- Ensure PNG files are in the `images/` folder
-- Verify file names match exactly (case-sensitive)
-
-### Character Encoding
-
-For non-ASCII characters (accents, special symbols):
-- The scripts use UTF-8 encoding
-- Ensure your JSON file is saved as UTF-8
-
-## Advanced Usage
-
-### Batch Processing
-
-Create multiple CVs at once:
-
-```
-python
-from cv_builder_v2 import CVData, CVBuilder
-
-# Load data
-cv_data = CVData()
-cv_data.load_from_json("animesh_cv_data.json")
-
-# Generate different versions
-builder = CVBuilder(cv_data)
-builder.build_cv("CV_Full.pdf")
-
-# Modify for short version
-cv_data.publications = cv_data.publications[:5]  # Top 5 papers
-builder = CVBuilder(cv_data)
-builder.build_cv("CV_Short.pdf")
-```
-
-### Custom Formatting
-
-You can extend the `CVBuilder` class to add custom sections:
-
-```
-python
-def _add_custom_section(self, story):
-    self._add_section_header(story, "CUSTOM SECTION")
-    # Add your content here
-```
-
-## Requirements
-
-```
-reportlab>=4.0.0
-Pillow>=10.0.0
-scholarly>=1.7.0
-requests>=2.31.0
-beautifulsoup4>=4.12.0
-lxml>=4.9.0
-python-dateutil>=2.8.0
-```
-
-## Support
-
-For issues or questions:
-- Edit the JSON file for data changes
-- Edit Python scripts for styling changes
-- Run `scholar_fetcher.py` for publication updates
-
-## License
-
-Free to use and modify for personal and professional purposes.
+| Style Name | Used For |
+|---|---|
+| `CVName` | Researcher's name in the header |
+| `CVTitle` | Professional title subtitle |
+| `CVContact` | Contact info lines |
+| `CVSectionHeading` | Section titles (EDUCATION, SKILLS, etc.) |
+| `CVBody` | Body text, bullet points |
+| `CVPublication` | Journal and conference paper entries |
+| `CVJobTitle` | Position or degree title |
+| `CVOrganization` | Organization name and location |
 
 ---
 
-**Author**: Animesh Choudhury  
-**Last Updated**: 2024
+## 📸 Adding a Profile Photo
+
+1. Place your photo (JPG or PNG) in the project directory
+2. Update `animesh_cv_data.json`:
+   ```json
+   "profile_image": "your_photo.jpg"
+   ```
+3. Re-run the builder:
+   ```bash
+   python cv_builder_v2.py
+   ```
+4. When prompted, type `y` to include the image
+
+> The builder automatically handles aspect-ratio correction and resizes the image to fit neatly in the CV header alongside your name and contact details.
+
+---
+
+## 📚 Google Scholar Integration
+
+Use `scholar_fetcher.py` to automatically pull your publication list and citation counts directly from your Google Scholar profile.
+
+### Find Your Scholar ID
+
+Your Scholar ID is in the URL of your Google Scholar profile:
+```
+https://scholar.google.com/citations?user=YOUR_ID_HERE&hl=en
+                                             ^^^^^^^^^^^
+                                         Copy this part
+```
+
+### Run the Fetcher
+
+```bash
+python scholar_fetcher.py
+```
+
+Enter your Scholar ID or full profile URL when prompted. The script will:
+- Fetch all publications with titles, venues, years, and citation counts
+- Sort them by publication year (most recent first)
+- Update `animesh_cv_data.json` automatically (with a backup of existing entries)
+
+Then regenerate your CV:
+```bash
+python cv_builder_v2.py
+```
+
+> **Rate Limiting:** The fetcher includes configurable delays (default: 2 seconds per publication) to avoid being blocked by Google Scholar. If you encounter errors, wait 10–15 minutes and retry.
+
+---
+
+## 🏗️ Architecture Overview
+
+```
+cv_builder_v2.py
+│
+├── CVData                        # Data model class
+│   ├── load_from_json()          # Loads animesh_cv_data.json
+│   └── save_to_json()            # Persists data back to JSON
+│
+└── CVBuilder                     # PDF generation class
+    ├── __init__()                # Initializes styles and data
+    ├── _setup_custom_styles()    # Defines all ReportLab paragraph styles
+    ├── _process_profile_image()  # Handles image resize & aspect ratio
+    ├── _add_header()             # Builds name/contact/image header block
+    ├── _add_section_header()     # Renders titled section dividers
+    ├── _add_summary()            # Professional summary paragraph
+    ├── _add_education()          # Education entries
+    ├── _add_experience()         # Work experience with bullet points
+    ├── _add_publications()       # Journal articles (sorted by year)
+    ├── _add_conference_papers()  # Conference proceedings
+    ├── _add_skills()             # Categorized technical skills
+    ├── _add_languages()          # Language proficiencies
+    ├── _add_awards()             # Awards and recognition
+    ├── _add_service()            # Professional development & service
+    └── build_cv()                # Assembles and renders the full PDF
+```
+
+---
+
+## 📋 CV Sections
+
+The generated PDF includes the following sections in order:
+
+1. **Header** — Name, title, contact info (email, phone, LinkedIn, GitHub, Scholar), and profile image
+2. **Professional Summary** — Concise research overview paragraph
+3. **Education** — Degrees with institution, location, year, and thesis title
+4. **Work Experience** — Positions with organization, period, and bullet-point responsibilities
+5. **Selected Publications** — Peer-reviewed journal articles with DOI links, sorted by year
+6. **Conference Papers & Proceedings** — Conference presentations and proceedings
+7. **Technical Skills & Expertise** — Skill categories (e.g., ML & AI, Remote Sensing, GIS)
+8. **Languages** — Language proficiencies and levels
+9. **Awards & Recognition** — Prizes, symposia, and speaking roles
+10. **Professional Development & Service** — Training programs, workshops, and webinars
+11. **Footer** — Auto-generated "Last updated: Month Year" timestamp
+
+---
+
+## 🛠️ Troubleshooting
+
+| Problem | Solution |
+|---|---|
+| `ModuleNotFoundError: reportlab` | Run `pip install -r requirements.txt` |
+| Profile image not appearing | Verify `profile_image` path in JSON matches the actual filename |
+| `PIL` image error | Run `pip install Pillow` |
+| Scholar fetcher blocked | Wait 10–15 minutes; increase delay when prompted |
+| PDF not updating | Ensure you saved `animesh_cv_data.json` before re-running |
+| Unicode rendering issues | The builder uses UTF-8 encoding throughout; ensure your JSON editor saves in UTF-8 |
+
+---
+
+## 💡 Tips & Best Practices
+
+- **Version control your JSON** — `animesh_cv_data.json` is your single source of truth. Commit it to Git.
+- **Run Scholar fetcher monthly** — Keeps citation counts current without manual updates.
+- **Multiple CV variants** — Maintain separate JSON files (e.g., `cv_data_academic.json`, `cv_data_industry.json`) for targeted applications.
+- **Profile photo format** — Square-cropped, high-resolution JPG or PNG with neutral background works best.
+- **Keep DOIs accurate** — The builder inserts DOI links verbatim into the PDF; broken DOIs are difficult to correct post-distribution.
+
+---
+
+## 📄 License
+
+This project is open source. You are free to use, modify, and adapt it for your own academic CV generation needs.
+
+---
+
+*Built with [ReportLab](https://www.reportlab.com/) · Designed for researchers in Earth & Atmospheric Sciences and beyond.*
