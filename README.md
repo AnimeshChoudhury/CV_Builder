@@ -66,15 +66,6 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-| Package | Version | Purpose |
-|---|---|---|
-| `reportlab` | ≥ 4.0.0 | PDF generation engine |
-| `Pillow` | ≥ 10.0.0 | Profile image processing |
-| `scholarly` | ≥ 1.7.0 | Google Scholar API *(optional)* |
-| `requests` | ≥ 2.31.0 | HTTP requests for Scholar |
-| `beautifulsoup4` | ≥ 4.12.0 | Web scraping for Scholar |
-| `python-dateutil` | ≥ 2.8.0 | Date parsing for experience sorting |
-
 ### 4. Generate the CV
 
 ```bash
