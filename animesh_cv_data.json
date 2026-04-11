@@ -14,7 +14,7 @@
     "address": "Pahartali, Ward No 9, Raghunathpur, Purulia, 723133, West Bengal, India",
     "profile_image": "profileImage.png"
   },
-  "summary": "PhD researcher with 6+ years of experience in Earth and Atmospheric Sciences, specializing in data-driven weather forecasting, machine learning for climate science, and geospatial analysis. Currently developing cutting-edge weather prediction systems using Pangu-Weather architecture and IMDAA reanalysis data at NIT Rourkela. Proven track record with publications (120+ citations) in high-impact journals including Remote Sensing, Journal of Environmental Management, and Urban Climate. Expert in WRF mesoscale modeling, deep learning for atmospheric sciences, drought monitoring, and satellite remote sensing with proficiency in Python, R, Google Earth Engine, and advanced ML frameworks.",
+  "summary": "PhD researcher in Earth and Atmospheric Sciences with experience in geospatial analysis, remote sensing, and data-driven approaches to weather and climate studies. My work focuses on exploring the application of machine learning and AI in improving weather forecasting and understanding climate variability. I have had the opportunity to work across diverse domains including atmospheric modeling, drought monitoring, air quality analysis, and satellite data interpretation. I have presented my work at conferences and contributed to peer-reviewed publications. I am continuously looking to learn, improve, and contribute to the growing intersection of geospatial science and AI for addressing real-world environmental challenges.",
   "education": [
     {
       "degree": "PhD in Earth and Atmospheric Sciences",
@@ -118,7 +118,7 @@
       "citations": 0,
       "type": "book_chapter",
       "doi": "https://doi.org/10.1201/9781003562986-8"
-    },    
+    },
     {
       "title": "A long-term analysis of pre-monsoon thunderstorm characteristic features over major urban areas of India",
       "authors": "Roy, D., Panda, J., Mukherjee, A., Choudhury, A., & Panda, S. K.",
