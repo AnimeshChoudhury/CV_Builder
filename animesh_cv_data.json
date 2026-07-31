@@ -346,6 +346,12 @@
   "service": [
     {
       "type": "training",
+      "name": "Machine Learning for Earth Systems Modelling — Course 2: Architectures, Data, and Prediction (23 hours)",
+      "organization": "European Centre for Medium-Range Weather Forecasts (ECMWF), under the Destination Earth Initiative, in collaboration with Karlsruhe Institute of Technology (KIT) and Wageningen University & Research",
+      "period": "27 July 2026"
+    },
+    {
+      "type": "training",
       "name": "Recent Trends in Time Series Forecasting using Deep Learning Models",
       "organization": "Department of Computer Science & Engineering, NIT Rourkela",
       "period": "December 25-29, 2023"
@@ -385,6 +391,12 @@
       "name": "Machine Learning (ML) and Deep Learning (DL) for Earth Observation (EO) Data and Application",
       "organization": "DA-IITC in Collaboration with SAC, ISRO",
       "period": "9th-13th August, 2021"
+    },
+    {
+      "type": "webinar",
+      "name": "Thunderstorm and Lightning Physics",
+      "organization": "Department of Physics (DST-FIST & DST-PURSE Sponsored), Koneru Lakshmaiah Education Foundation (KLEF), in association with the Indian Aerosol Science & Technology Association (IASTA)",
+      "date": "24 April 2026"
     },
     {
       "type": "webinar",
