@@ -111,6 +111,17 @@
   ],
   "publications": [
     {
+      "title": "Urban growth analysis and prediction over six Indian cities and its association with pre-monsoon LST and rainfall",
+      "authors": "Choudhury, A., Panda, J., & Mukherjee, A.",
+      "venue": "Journal of Earth System Science",
+      "year": 2026,
+      "volume": "135",
+      "pages": "190",
+      "citations": 0,
+      "type": "journal",
+      "doi": "https://doi.org/10.1007/s12040-026-02896-z"
+    },
+    {
       "title": "Analysis and Prediction of PM2.5 Concentrations Over Indian Megacities Using Geospatial Techniques and Deep Learning Models",
       "authors": "Panda, J., Mukherjee, A., Sarkar, A., Kumar, G., & Choudhury, A.",
       "venue": "Geospatial Technologies",
