@@ -151,15 +151,6 @@
       "doi": "https://doi.org/10.1007/s11600-026-01806-7"
     },
     {
-      "title": "Development of a Data-driven weather forecasting system over India with Pangu-Weather architecture and IMDAA reanalysis Data",
-      "authors": "Choudhury, A., & Panda, J.",
-      "venue": "In Preparation",
-      "year": 2025,
-      "citations": 0,
-      "type": "journal",
-      "doi": "https://arxiv.org/abs/2503.12956"
-    },
-    {
       "title": "BharatBench: Dataset for data-driven weather forecasting over India",
       "authors": "Choudhury, A., Panda, J., & Mukherjee, A.",
       "venue": "In Preparation",

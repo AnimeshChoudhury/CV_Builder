@@ -12,6 +12,7 @@ from reportlab.lib.enums import TA_LEFT, TA_CENTER, TA_JUSTIFY, TA_RIGHT
 from datetime import datetime
 import json
 import os
+import io
 from PIL import Image as PILImage
 
 
@@ -223,11 +224,20 @@ class CVBuilder:
             right = left + min_dim
             bottom = top + min_dim
             img = img.crop((left, top, right, bottom))
-            
+
+            # Downscale to a print-appropriate resolution and compress,
+            # so the embedded image isn't the full-resolution source file
+            target_px = 600
+            if img.width > target_px:
+                img = img.resize((target_px, target_px), PILImage.LANCZOS)
+            buf = io.BytesIO()
+            img.save(buf, format='JPEG', quality=85)
+            buf.seek(0)
+
             # Calculate dimensions
             img_size = size * inch
-            
-            return Image(image_path, width=img_size, height=img_size)
+
+            return Image(buf, width=img_size, height=img_size)
         except Exception as e:
             print(f"Warning: Could not load profile image: {e}")
             return None
