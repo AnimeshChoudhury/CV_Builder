@@ -111,6 +111,17 @@
   ],
   "publications": [
     {
+      "title": "A Modeling Effort for Medium-Range Weather Prediction over India with a Modified Pangu-Weather Architecture",
+      "authors": "Choudhury, A., Panda, J., & Bhattacharyya, S.",
+      "venue": "Asia-Pacific Journal of Atmospheric Sciences",
+      "year": 2026,
+      "volume": "62",
+      "pages": "36",
+      "citations": 0,
+      "type": "journal",
+      "doi": "https://doi.org/10.1007/s13143-026-00458-3"
+    },
+    {
       "title": "Urban growth analysis and prediction over six Indian cities and its association with pre-monsoon LST and rainfall",
       "authors": "Choudhury, A., Panda, J., & Mukherjee, A.",
       "venue": "Journal of Earth System Science",
